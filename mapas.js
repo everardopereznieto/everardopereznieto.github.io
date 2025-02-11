@@ -275,7 +275,8 @@ function dibujaMapa(coordenadas) {
     });
 
     const infoWindow = new google.maps.InfoWindow({
-        content: "<a href='https://www.openstreetmap.org/edit?editor=id#map=17/19.98893/-101.28319' target='_blank'>OpenTopography</a><p>Informacion del predio</p><p>Mayo 2007</p>"
+        //content: "<a href='https://www.openstreetmap.org/edit?editor=id#map=17/19.98893/-101.28319' target='_blank'>OpenTopography</a><p>Informacion del predio</p><p>Mayo 2007</p>"
+        content: "<a href='https://cloud.pix4d.com/dataset/231883/model?shareToken=ee38b060d1804f12b451a4cf831c50b7' target='_blank'>OpenTopography</a><p>Informacion del predio</p><p>Mayo 2007</p>"
     });
 
     area.setMap(map);
