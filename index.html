@@ -335,7 +335,10 @@
       </div>
       <div class="h4 title text-center">Everardo Pérez Nieto</div>
       <div class="text-center text-muted">
-        <p>&copy; 2024 Todos los derechos reservados.<br>Ingeniero en Computación</p>
+        <p>&copy; <span id="anio-actual"></span> Todos los derechos reservados.<br>Ingeniero en Computación</p>
+        <script>
+          document.getElementById('anio-actual').textContent = new Date().getFullYear();
+        </script>
       </div>
     </footer>
     <script src="js/core/jquery.3.2.1.min.js?ver=1.1.0"></script>
