@@ -85,7 +85,20 @@
             <div class="h4 mt-0 title">Información Personal</div>
             <div class="row">
               <div class="col-sm-4"><strong class="text-uppercase">Edad:</strong></div>
-              <div class="col-sm-8">36 años (14 de abril 1988)</div>
+            <div class="col-sm-8"><span id="edad"></span> (14 de abril 1988)</div>
+            <script>
+                // Calcular edad automáticamente
+                (function() {
+                    var nacimiento = new Date(1988, 3, 14); // Mes 3 = abril (0-indexed)
+                    var hoy = new Date();
+                    var edad = hoy.getFullYear() - nacimiento.getFullYear();
+                    var m = hoy.getMonth() - nacimiento.getMonth();
+                    if (m < 0 || (m === 0 && hoy.getDate() < nacimiento.getDate())) {
+                        edad--;
+                    }
+                    document.getElementById('edad').textContent = edad + ' años';
+                })();
+            </script>
             </div>
             <div class="row mt-3">
               <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
@@ -294,70 +307,26 @@
 
 <!-- Contacto -->
 <div class="section" id="contact">
-  <div class="cc-contact-information" style="background-image: url('images/staticmap.png')">
-    <div class="container">
-      <div class="cc-contact">
-        <div class="row">
-          <div class="col-md-9">
-            <div class="card mb-0" data-aos="zoom-in">
-              <div class="h4 text-center title">Contacto</div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="card-body">
-                    <form action="https://formspree.io/everardopereznieto@gmail.com" method="POST">
-                      <div class="p pb-3"><strong>Contáctame</strong></div>
-                      <div class="row mb-3">
-                        <div class="col">
-                          <div class="input-group"><span class="input-group-addon"><i class="fa fa-user-circle"></i></span>
-                            <input class="form-control" type="text" name="name" placeholder="Nombre" required="required"/>
-                          </div>
+    <div class="cc-contact-information" style="background-image: url('images/staticmap.png')">
+        <div class="container">
+            <div class="cc-contact">
+                <div class="row justify-content-center">
+                    <div class="col-md-6">
+                        <div class="card mb-0" data-aos="zoom-in">
+                            <div class="h4 text-center title">Contacto</div>
+                            <div class="card-body text-center">
+                                <p class="mb-2"><strong>Teléfono:</strong> 786 129 57 82</p>
+                                <p class="mb-2"><strong>Email:</strong> everardopereznieto@gmail.com</p>
+                                <p class="mb-2"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/everardo-perez-nieto-b4278826b/" target="_blank">everardo-perez-nieto-b4278826b</a></p>
+                                <p class="mb-0"><strong>GitHub:</strong> <a href="https://github.com/everardopereznieto" target="_blank">everardopereznieto</a></p>
+                            </div>
                         </div>
-                      </div>
-                      <div class="row mb-3">
-                        <div class="col">
-                          <div class="input-group"><span class="input-group-addon"><i class="fa fa-file-text"></i></span>
-                            <input class="form-control" type="text" name="Subject" placeholder="Asunto" required="required"/>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row mb-3">
-                        <div class="col">
-                          <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                            <input class="form-control" type="email" name="_replyto" placeholder="Correo electrónico" required="required"/>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row mb-3">
-                        <div class="col">
-                          <div class="form-group">
-                            <textarea class="form-control" name="message" placeholder="Tu mensaje" required="required"></textarea>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col">
-                          <button class="btn btn-primary" type="submit">Enviar</button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                  <div class="card-body">
-                    <p class="mb-0"><strong>Teléfono</strong></p>
-                    <p class="pb-2">786 129 57 82</p>
-                    <p class="mb-0"><strong>Email</strong></p>
-                    <p>everardopereznieto@gmail.com</p>
-                  </div>
-                </div>
-              </div>
             </div>
-          </div>
         </div>
-      </div>
     </div>
-  </div>
-</div></div>
+</div>
     </div>
     <footer class="footer">
       <div class="container text-center">
